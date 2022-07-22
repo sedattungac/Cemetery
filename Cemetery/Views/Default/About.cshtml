@@ -1,0 +1,36 @@
+﻿
+@{ ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_TemplateLayout.cshtml"; }
+
+<div class="site-section" data-aos="fade">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="row mb-5">
+                    <div class="col-12 ">
+                        <h2 class="site-section-heading text-center">Hakkımızda</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeAsync("AboutList")
+
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="row mb-5">
+                    <div class="col-12 ">
+                        <h2 class="site-section-heading text-center">Ustalarımız</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @await Component.InvokeAsync("PersonalList")
+
+
+
+
+    </div>
+</div>
+

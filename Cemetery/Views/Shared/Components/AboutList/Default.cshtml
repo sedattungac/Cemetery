@@ -1,0 +1,15 @@
+﻿@using Cemetery.Entity.Entity
+@model List<About>
+
+@foreach (var item in Model)
+{
+<div class="row mb-5">
+    <div class="col-md-7">
+        <img src="@item.ImageUrl" alt="Images" class="img-fluid">
+    </div>
+    <div class="col-md-4 ml-auto">
+        <h3 class="text-white">@item.Title</h3>
+        <p class="text-white">@item.Description</p>
+        <p class="text-white">@item.Description2</p>
+    </div>
+</div>}

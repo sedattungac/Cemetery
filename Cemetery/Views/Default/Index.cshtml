@@ -1,0 +1,22 @@
+﻿@using Cemetery.Entity.Entity
+@model IEnumerable<ProductCategory>
+@{ ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TemplateLayout.cshtml"; }
+
+<div class="text-center text-white">
+    <p>MEZARLIK, TEZGAH, ÇEŞME İŞLERİNİZ İTİNAYLA YAPILIR</p>
+</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+<div class="col-lg-4">
+    <div class="image-wrap-2">
+        <div class="image-info">
+            <h2 class="mb-3">@item.Title</h2>
+            <a href="/Default/Products/@item.ProductCategoryId" class="btn btn-outline-white py-2 px-4">Daha Fazla</a>
+        </div>
+        <img src="@item.ImageUrl" alt="Image" class="img-fluid">
+    </div>
+</div>}
+</div>
+
