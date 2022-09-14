@@ -49,6 +49,7 @@ namespace Cemetery.Controllers
         [HttpPost]
         public IActionResult SendMessage(Contact contact)
         {
+            contact.Date = DateTime.Now;
             contactManager.TAdd(contact);
             return RedirectToAction("Contact");
         }

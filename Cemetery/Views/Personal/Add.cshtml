@@ -1,25 +1,26 @@
-﻿@model Cemetery.Models.ProductCategoryViewModel
+﻿@model Cemetery.Models.PersonalViewModel
 
 @{
     ViewData["Title"] = "Add";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h4>Kategori Ekleme Sayfası</h4>
+
+<h4>Personal Ekleme Sayfası</h4>
 <hr />
 <div class="row">
     <div class="col-md-12">
-        <form asp-action="Add" asp-controller="ProductCategory" method="post" enctype="multipart/form-data">
+        <form asp-action="Add" asp-controller="Personal" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label">Başlık</label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="FullName" class="control-label">Ad Soyad</label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label">Açıklama</label>
-                <textarea asp-for="Description" class="form-control" rows="5"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label asp-for="Telephone" class="control-label">Telefon</label>
+                <input type="tel" asp-for="Telephone" class="form-control" />
+                <span asp-validation-for="Telephone" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ImageUrl" class="control-label">Resim</label>
@@ -37,6 +38,3 @@
         </form>
     </div>
 </div>
-
-
-

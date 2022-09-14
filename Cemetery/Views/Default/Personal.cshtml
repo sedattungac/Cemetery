@@ -3,16 +3,25 @@
     ViewData["Title"] = "Personal";
     Layout = "~/Views/Shared/_TemplateLayout.cshtml";
 }
-
+<br />
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="row mb-5">
+            <div class="col-12 ">
+                <h2 class="site-section-heading text-center">Ustalarımız</h2>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row site-section">
     @foreach (var item in Model)
     {
         <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5">
-            <img src="/photosen/images/person_4.jpg" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
+            <img src="@item.ImageUrl" alt="Image" class="img-fluid w-50 rounded-circle mb-4">
             <h2 class="text-white font-weight-light mb-4">@item.FullName</h2>
             <p class="mb-4"><a href="tel:@item.Telephone"> Ara: @item.Telephone</a></p>
             <p>
-                <a href="#" class="pl-0 pr-3"><span class="icon-whatsapp"></span></a>
+                <a href="https://wa.me/@item.Telephone/?text=Merhaba @item.FullName Usta" class="pl-0 pr-3"><span class="icon-whatsapp"></span></a>
             </p>
         </div>
     }

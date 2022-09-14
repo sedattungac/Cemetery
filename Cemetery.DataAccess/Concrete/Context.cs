@@ -12,8 +12,8 @@ namespace Cemetery.DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=AKSLT047; database=DbCemetery;integrated security=true");
-            //optionsBuilder.UseSqlServer("Data Source=77.245.159.136;Initial Catalog=veteriner;User ID=veteriner;Password=A.sd12345678987654321;persist security info=True");
+            //optionsBuilder.UseSqlServer("server=AKSLT047; database=DbCemetery;integrated security=true");
+            optionsBuilder.UseSqlServer("Data Source=77.245.159.10;Initial Catalog=kerimoglu;User ID=kerimoglu;Password=A.sd12345678987654321;persist security info=True");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Admin> Admins { get; set; }

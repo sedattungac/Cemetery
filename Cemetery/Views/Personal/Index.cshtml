@@ -8,7 +8,7 @@
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">Personel Listesi</h3>
-        <a class="float-right btn btn-outline-warning" href="/ProductCategory/Add">Personel Ekle</a>
+        <a class="float-right btn btn-outline-warning" href="/Personal/Add">Personel Ekle</a>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -17,7 +17,7 @@
                 <tr>
                     <th>#</th>
                     <th>Başlık</th>
-                    <th>Açıklama</th>
+                    <th>Telefon</th>
                     <th>Resim</th>
                     <th></th>
                     <th></th>
@@ -30,7 +30,7 @@
                         <td>@order</td>
                         <td>@item.FullName</td>
                         <td>@item.Telephone</td>
-                        <td><img width="200" src="@item.ImageUrl" /></td>
+                        <td><img class="rounded-circle" width="100" src="@item.ImageUrl" /></td>
                         <td><a href="/Personal/Delete/@item.PersonalId" class="btn btn-outline-danger">Sil</a></td>
                         <td><a href="/Personal/Edit/@item.PersonalId" class="btn btn-outline-success">Düzenle</a></td>
                     </tr>
@@ -41,8 +41,8 @@
             <tfoot>
                 <tr>
                     <th>#</th>
-                    <th>Başlık</th>
-                    <th>Açıklama</th>
+                    <th>Ad Soyad</th>
+                    <th>Telefon</th>
                     <th>Resim</th>
                     <th></th>
                     <th></th>

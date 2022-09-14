@@ -35,10 +35,7 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             c.Add(t);
-            c.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON;");
             c.SaveChanges();
-            c.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF;");
-
         }
 
         public List<T> GetListAll(Expression<Func<T, bool>> filter)
